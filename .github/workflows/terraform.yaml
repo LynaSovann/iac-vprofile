@@ -86,5 +86,5 @@ jobs:
         uses: azure/setup-kubectl@v4
 
       - name: Install Ingress controller
-        if: steps.apply.outcome == 'success' && steps.getconfig.outcome == 'success'
+        # if: steps.apply.outcome == 'success' && steps.getconfig.outcome == 'success'
         run: kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.1/deploy/static/provider/aws/deploy.yaml
